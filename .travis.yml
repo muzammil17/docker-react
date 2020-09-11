@@ -4,7 +4,7 @@ services:
   - docker
 # what to do before starting test
 before_install:
-  - docker build -t muzammil76/docker-react - Dockerfile.dev .
+  - docker build -t muzammil76/docker-react -f Dockerfile.dev .
 
   script:
     - docker run -e CI=true -it muzammil76/docker-react npm run test
